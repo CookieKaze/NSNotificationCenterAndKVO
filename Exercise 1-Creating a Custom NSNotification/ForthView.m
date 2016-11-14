@@ -12,10 +12,7 @@
 
 - (IBAction)pannGesture:(UIPanGestureRecognizer *)sender {
     self.point = [sender translationInView:self];
-}
-
-- (void) addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context {
-    
+    //NSLog(@"%@", NSStringFromCGPoint(self.point));
 }
 
 @end

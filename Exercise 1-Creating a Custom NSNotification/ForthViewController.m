@@ -19,23 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self addObserver:self.trackPadView forKeyPath:@"point" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:NULL];
+    [self.trackPadView addObserver:self forKeyPath:@"point" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:NULL];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    
+    if ([keyPath isEqualToString:@"point"]) {
+        float newX = self.redSquare.center.x + self.trackPadView.point.x * 0.25;
+        float newY = self.redSquare.center.y + self.trackPadView.point.y * 0.25;
+        CGPoint newPoint = CGPointMake(newX, newY);
+        self.redSquare.center = newPoint;
+    }
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
