@@ -29,7 +29,7 @@
 }
 
 - (IBAction)stepperTapped:(UIStepper *)sender {
-    NSDictionary * stepperInfo = @{@"stepperValue": [[NSNumber alloc]initWithDouble:self.stepper.value]};
+    NSDictionary * stepperInfo = @{@"stepperValue": [[NSNumber alloc]initWithInt: (int)self.stepper.value]};
     NSLog(@"%@", stepperInfo[@"stepperValue"]);
     NSNotificationCenter * nc = [NSNotificationCenter defaultCenter];
     NSNotification * notice = [[NSNotification alloc] initWithName:@"stepperValueChanged" object:nil userInfo:stepperInfo];

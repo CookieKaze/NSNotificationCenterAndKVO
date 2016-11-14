@@ -15,6 +15,8 @@
 		1D0431521DD8DBFB00AA1493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0431511DD8DBFB00AA1493 /* Assets.xcassets */; };
 		1D0431551DD8DBFB00AA1493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0431531DD8DBFB00AA1493 /* LaunchScreen.storyboard */; };
 		1D489F3D1DD9240200FF24BD /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D489F3C1DD9240200FF24BD /* ThirdViewController.m */; };
+		1D489F401DD95DD800FF24BD /* ForthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D489F3F1DD95DD800FF24BD /* ForthViewController.m */; };
+		1D489F431DD95DE900FF24BD /* ForthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D489F421DD95DE900FF24BD /* ForthView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		1D0431561DD8DBFB00AA1493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D489F3B1DD9240200FF24BD /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		1D489F3C1DD9240200FF24BD /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		1D489F3E1DD95DD800FF24BD /* ForthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForthViewController.h; sourceTree = "<group>"; };
+		1D489F3F1DD95DD800FF24BD /* ForthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForthViewController.m; sourceTree = "<group>"; };
+		1D489F411DD95DE900FF24BD /* ForthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForthView.h; sourceTree = "<group>"; };
+		1D489F421DD95DE900FF24BD /* ForthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForthView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +70,6 @@
 		1D0431411DD8DBFB00AA1493 /* Exercise 1-Creating a Custom NSNotification */ = {
 			isa = PBXGroup;
 			children = (
-				1D0431451DD8DBFB00AA1493 /* AppDelegate.h */,
-				1D0431461DD8DBFB00AA1493 /* AppDelegate.m */,
 				1D0431481DD8DBFB00AA1493 /* FirstViewController.h */,
 				1D0431491DD8DBFB00AA1493 /* FirstViewController.m */,
 				1D04314B1DD8DBFB00AA1493 /* SecondViewController.h */,
@@ -73,9 +77,10 @@
 				1D489F3B1DD9240200FF24BD /* ThirdViewController.h */,
 				1D489F3C1DD9240200FF24BD /* ThirdViewController.m */,
 				1D04314E1DD8DBFB00AA1493 /* Main.storyboard */,
-				1D0431511DD8DBFB00AA1493 /* Assets.xcassets */,
-				1D0431531DD8DBFB00AA1493 /* LaunchScreen.storyboard */,
-				1D0431561DD8DBFB00AA1493 /* Info.plist */,
+				1D489F411DD95DE900FF24BD /* ForthView.h */,
+				1D489F421DD95DE900FF24BD /* ForthView.m */,
+				1D489F3E1DD95DD800FF24BD /* ForthViewController.h */,
+				1D489F3F1DD95DD800FF24BD /* ForthViewController.m */,
 				1D0431421DD8DBFB00AA1493 /* Supporting Files */,
 			);
 			path = "Exercise 1-Creating a Custom NSNotification";
@@ -84,6 +89,11 @@
 		1D0431421DD8DBFB00AA1493 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1D0431451DD8DBFB00AA1493 /* AppDelegate.h */,
+				1D0431461DD8DBFB00AA1493 /* AppDelegate.m */,
+				1D0431511DD8DBFB00AA1493 /* Assets.xcassets */,
+				1D0431531DD8DBFB00AA1493 /* LaunchScreen.storyboard */,
+				1D0431561DD8DBFB00AA1493 /* Info.plist */,
 				1D0431431DD8DBFB00AA1493 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -162,7 +172,9 @@
 			files = (
 				1D04314D1DD8DBFB00AA1493 /* SecondViewController.m in Sources */,
 				1D489F3D1DD9240200FF24BD /* ThirdViewController.m in Sources */,
+				1D489F401DD95DD800FF24BD /* ForthViewController.m in Sources */,
 				1D0431471DD8DBFB00AA1493 /* AppDelegate.m in Sources */,
+				1D489F431DD95DE900FF24BD /* ForthView.m in Sources */,
 				1D04314A1DD8DBFB00AA1493 /* FirstViewController.m in Sources */,
 				1D0431441DD8DBFB00AA1493 /* main.m in Sources */,
 			);

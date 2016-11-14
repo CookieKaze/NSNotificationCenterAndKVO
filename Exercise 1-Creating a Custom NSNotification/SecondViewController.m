@@ -10,21 +10,31 @@
 
 @interface SecondViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *counterLabel;
-@property NSDictionary * userInfo;
+@property NSNotification * noticeMessage;
 @end
 
 @implementation SecondViewController
 
-
-
--(void) viewWillAppear:(BOOL)animated {
-     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(increaseCounter:) name:@"stepperValueChanged" object:nil];
-    self.counterLabel.text = [NSString stringWithFormat:@"%@", self.userInfo[@"stepperValue"]];
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getCounterValue:) name:@"stepperValueChanged" object:nil];
+    }
+    return self;
 }
 
--(void) increaseCounter: (NSNotification *) notice {
-    self.userInfo = notice.userInfo;
-    self.counterLabel.text = [NSString stringWithFormat:@"%@", self.userInfo[@"stepperValue"]];
+-(void) viewWillAppear:(BOOL)animated {
+    [self increaseCounter];
+}
+
+-(void) getCounterValue: (NSNotification *) notice {
+    self.noticeMessage = notice;
+    [self increaseCounter];
+}
+
+-(void) increaseCounter {
+    self.counterLabel.text = [NSString stringWithFormat:@"%@", self.noticeMessage.userInfo[@"stepperValue"]];
 }
 
 - (void) dealloc {
